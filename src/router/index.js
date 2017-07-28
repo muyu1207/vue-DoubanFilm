@@ -21,5 +21,12 @@ export default[{
       component: r=>require.ensure([],() => r(require('../views/animation')),'index')
     },
 
+    //豆瓣电影排行
+    {
+      path: '/douban',
+      name:'douban',
+      component: r=>require.ensure([],() => r(require('../views/douban')),'index')
+    },
+
   ]
 }]
