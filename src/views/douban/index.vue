@@ -14,13 +14,23 @@
 
     <el-table :data="articles"  style="width: 100%;margin:0px auto;">
       
-      <el-table-column  prop="id"   label="ID"  width="180">
+      <el-table-column    label="ID"  width="180">
+          <template scope="scope">
+            {{scope.row.id}}
+          </template>
       </el-table-column>
 
-      <el-table-column  prop="title" label="姓名" width="180">
+      <el-table-column  label="标题" width="180">
+           <template scope="scope">
+                {{scope.row.title}}
+          </template>
       </el-table-column>
 
-      <el-table-column  prop="images.small" label="描述" >
+      <el-table-column  label="封面" >
+          <template scope="scope">
+               <img class="filmcover" :src="scope.row.images.small" />
+          </template>
+          
       </el-table-column>
 
     </el-table>
@@ -60,12 +70,10 @@
 </script>
 
 <style scoped>
-  .liimg{
+  .filmcover{
     width:30px;
   }
-  li{
-    text-align: left;
-  }
+  
 
 </style>
 
