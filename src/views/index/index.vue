@@ -1,21 +1,15 @@
 <template>
-    <el-table
-      :data="tableData"
-      style="width: 1000px;margin:0px auto;">
-      <el-table-column
-        prop="id"
-        label="ID"
-        width="180">
+    <el-table :data="tableData"  style="width: 1000px;margin:0px auto;">
+      
+      <el-table-column  prop="id"   label="ID"  width="180">
       </el-table-column>
-      <el-table-column
-        prop="name"
-        label="姓名"
-        width="180">
+
+      <el-table-column  prop="name" label="姓名" width="180">
       </el-table-column>
-      <el-table-column
-        prop="desc"
-        label="描述">
+
+      <el-table-column  prop="desc" label="描述" >
       </el-table-column>
+
     </el-table>
   </template>
 
@@ -26,7 +20,7 @@
           tableData: [{
             id: '1',
             name: '内置过度动画',
-            desc: '链接'
+            desc: "animation"
           }, {
             id: '2',
             name: 'Layout布局',
