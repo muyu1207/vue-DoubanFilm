@@ -1,14 +1,22 @@
 import Vue from 'vue'
 
-import router from './router'
+//路由
+import VueRouter from 'vue-router'
+import routes from './router/index'
+Vue.use(VueRouter)
+const router = new VueRouter({
+  routes
+})
+
+//UI
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
-
-import App from './App'
-
-
 Vue.use(ElementUI)
 
+
+
+
+import App from './App'
 Vue.config.productionTip = false
 new Vue({
   el: '#app',
