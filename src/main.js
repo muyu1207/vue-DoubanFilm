@@ -6,16 +6,20 @@ import routes from './router/index'
 Vue.use(VueRouter)
 const router = new VueRouter({
   routes
-})
+});
 
 //UI
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
-Vue.use(ElementUI)
+Vue.use(ElementUI);
 
 //数据获取
 import VueResource from 'vue-resource'
 Vue.use(VueResource);
+
+//下拉刷新
+import VueScroller from 'vue-scroller'
+Vue.use(VueScroller);
 
 
 
